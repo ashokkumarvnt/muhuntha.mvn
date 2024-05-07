@@ -25,6 +25,14 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+  
+          <plugins>
+            <plugin>
+                <groupId>org.sonarsource.scanner.maven</groupId>
+                <artifactId>sonar-maven-plugin</artifactId>
+                <version>10.5.1.90531</version>
+            </plugin>
+        </plugins>
 
   <build>
     <finalName>mugutha</finalName>
