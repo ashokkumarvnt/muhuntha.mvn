@@ -10,6 +10,33 @@
   <name>Cyborg Developer Maven Webapp</name>
   <url>http://maven.apache.org</url>
 
+
+<project> 
+    <properties>
+        <java.version>11.0.22</java.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>11.0.22</maven.compiler.source>
+        <maven.compiler.target>11.0.22</maven.compiler.target>
+    </properties>
+</project>
+
+<project>
+    <!-- Other configurations -->
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.sonarsource.scanner.maven</groupId>
+                <artifactId>sonar-maven-plugin</artifactId>
+                <version>310.5.1.90531</version>
+            </plugin>
+            <!-- Other plugins -->
+        </plugins>
+    </build>
+
+    <!-- Other configurations -->
+</project>
+
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
