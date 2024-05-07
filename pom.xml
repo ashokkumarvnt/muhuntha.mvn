@@ -6,6 +6,40 @@
   <artifactId>maven-web</artifactId>
   <packaging>war</packaging>
   <version>1.0-SNAPSHOT</version>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.sonarsource.scanner.maven</groupId>
+                <artifactId>sonar-maven-plugin</artifactId>
+                <version>10.5.1</version>
+            </plugin>
+        </plugins>
+    </build>
+    <!-- SonarQube configuration -->
+    <reporting>
+        <plugins>
+            <plugin>
+                <groupId>org.sonarsource.scanner.maven</groupId>
+                <artifactId>sonar-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </reporting>
+
+    <!-- Additional SonarQube properties -->
+    <profiles>
+        <profile>
+            <id>sonar</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <!-- Configure SonarQube server -->
+                <sonar.host.url>http://3.111.196.113:9000</sonar.host.url>
+                <!-- Add other SonarQube properties as needed -->
+            </properties>
+        </profile>
+    </profiles>
+
 
   <name>Cyborg Developer Maven Webapp</name>
   <url>http://maven.apache.org</url>
